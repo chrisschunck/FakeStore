@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --brand-yellow: yellow;
+  --brand-black: black;
+}
+
+body{
+  background-color: #f4f4f5; 
+}
+.header-top {
+  background: var(--brand-yellow);
+  border-bottom: 4px solid var(--brand-black);
+}
+.header-bar {
+  background: var(--brand-black);
+  color: var(--brand-yellow);
+}
+.btn-yellow {
+  background: var(--brand-yellow);
+  color: #000;
+}
+.card {
+  background: white;
+}
