@@ -9,7 +9,12 @@ export default function Home(){
   const [jewelery, setJewelery] = useState([])
   const [clothing, setClothing] = useState([])
   const [loading, setLoading] = useState(true)
+  const [card, setCard] = useState([])
 
+  const addToCart = (product) => {
+    setCart((prev) => [...prev, product]);
+};
+  
   useEffect(()=>{
     async function load(){
       setLoading(true)
