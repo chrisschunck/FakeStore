@@ -8,6 +8,10 @@ export default function ProdutoDetalhe(){
   const [product, setProduct] = useState(null)
   const [loading, setLoading] = useState(true)
 
+    <button onClick={() => addToCart(product)}>
+    Adicionar ao Carrinho
+    </button>
+  
   useEffect(()=>{
     async function load(){
       try{
