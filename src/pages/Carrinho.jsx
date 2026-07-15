@@ -10,6 +10,9 @@ export default function Carrinho(){
       ))}
     </>
   );
+  <button onClick={() => navigate("/")}>
+    Voltar para Home
+  </button>
     </div>
   )
 }
