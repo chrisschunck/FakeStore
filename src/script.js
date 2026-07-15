@@ -1,3 +1,5 @@
+import Carrinho from "Carrinho.jsx"
+
 const ProductCard = document.elementById("ProductCard");
 const buttonOnClick = document.elementById("buttonOnClick");
 
