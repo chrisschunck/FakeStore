@@ -23,6 +23,9 @@ export default function Carrinho() {
         {cart.map(item => (
           <div key={item.id} className="border rounded p-4">
             <div className="flex justify-between items-start gap-4">
+              <div className="flex items-center justify-center p-6">
+                <img src={product.image} alt={product.title} className="max-h-96 object-contain" />
+              </div>
               <div>
                 <p className="font-semibold">{item.title}</p>
                 <p className="text-sm text-gray-600">Qtd: {item.quantity}</p>
