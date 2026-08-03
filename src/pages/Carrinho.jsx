@@ -24,7 +24,7 @@ export default function Carrinho() {
           <div key={item.id} className="border rounded p-4">
             <div className="flex justify-between items-start gap-4">
               <div className="flex items-center justify-center p-6">
-                <img src={item.image} alt={item.image} className="max-h-96 object-contain" />
+                <img src={item.image} alt={item.image} className="max-h-36 object-contain" />
               </div>
               <div>
                 <p className="font-semibold">{item.title}</p>
