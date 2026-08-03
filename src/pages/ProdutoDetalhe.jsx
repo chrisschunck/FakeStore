@@ -6,8 +6,8 @@ const API = import.meta.env.VITE_API_URL || 'https://fakestoreapi.com'
 
 export default function ProdutoDetalhe(){
   const { id } = useParams()
-  const [product, setProduct] = useState(null)
-  const [loading, setLoading] = useState(true)
+  const [product, setProduct] = useState(null);
+  const [loading, setLoading] = useState(true);
 
     <button onClick={() => addToCart(product)}>
     Adicionar ao Carrinho
@@ -45,7 +45,7 @@ export default function ProdutoDetalhe(){
           <p className="mb-4">{product.description}</p>
           <div className="flex items-center space-x-3">
             <button className="btn-yellow px-4 py-2 rounded font-sm" onClick="addToCart(product)">Adicionar ao carrinho</button>
-            <Link to="/"<button className="px-4 py-2 border rounded">Voltar</button></Link>
+            <Link to="/"><button className="px-4 py-2 border rounded">Voltar</button></Link>
           </div>
         </div>
       </div>

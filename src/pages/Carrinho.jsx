@@ -8,11 +8,9 @@ export default function Carrinho(){
           <p>Qtd: {item.quantity}</p>
         </div>
       ))}
-    </>
-  );
   <button onClick={() => navigate("/")}>
     Voltar para Home
   </button>
-    </div>
-  )
+   </div>
+ )
 }
