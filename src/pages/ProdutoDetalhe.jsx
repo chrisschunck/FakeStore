@@ -44,7 +44,7 @@ export default function ProdutoDetalhe(){
           <p className="mb-4">{product.description}</p>
           <div className="flex items-center space-x-3">
             <button className="btn-yellow px-4 py-2 rounded font-sm">Adicionar ao carrinho</button>
-            <button className="px-4 py-2 border rounded">Voltar</button>
+            <a href="#"<button className="px-4 py-2 border rounded">Voltar</button></a>
           </div>
         </div>
       </div>
