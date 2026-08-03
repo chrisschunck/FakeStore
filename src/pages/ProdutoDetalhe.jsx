@@ -44,7 +44,7 @@ export default function ProdutoDetalhe(){
           <p className="text-lg mb-4">R$ {Number(product.price).toFixed(2)}</p>
           <p className="mb-4">{product.description}</p>
           <div className="flex items-center space-x-3">
-            <button className="btn-yellow px-4 py-2 rounded font-sm">Adicionar ao carrinho</button>
+            <Link to="/carrinho"<button className="btn-yellow px-4 py-2 rounded font-sm">Adicionar ao carrinho</button></Link>
             <Link to="/"<button className="px-4 py-2 border rounded">Voltar</button></Link>
           </div>
         </div>
