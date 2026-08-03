@@ -1,36 +1,34 @@
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom'
+import { CartContext } from '../context/CartContext'
 
 const API = import.meta.env.VITE_API_URL || 'https://fakestoreapi.com'
 
-export default function ProdutoDetalhe(){
+export default function ProdutoDetalhe() {
   const { id } = useParams()
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
+  const { addToCart } = useContext(CartContext)
 
-    <button onClick={() => addToCart(product)}>
-    Adicionar ao Carrinho
-    </button>
-  
-  useEffect(()=>{
-    async function load(){
-      try{
+  useEffect(() => {
+    async function load() {
+      try {
         setLoading(true)
         const res = await fetch(`${API}/products/${id}`)
         const data = await res.json()
         setProduct(data)
-      }catch(err){
+      } catch (err) {
         console.error(err)
-      }finally{
+      } finally {
         setLoading(false)
       }
     }
     load()
-  },[id])
+  }, [id])
 
-  if(loading) return <p>Carregando</p>
-  if(!product) return <p>Produto não encontrado</p>
+  if (loading) return <p>Carregando</p>
+  if (!product) return <p>Produto não encontrado</p>
 
   return (
     <div className="max-w-4xl mx-auto card p-6">
@@ -44,7 +42,10 @@ export default function ProdutoDetalhe(){
           <p className="text-lg mb-4">R$ {Number(product.price).toFixed(2)}</p>
           <p className="mb-4">{product.description}</p>
           <div className="flex items-center space-x-3">
-            <button className="btn-yellow px-4 py-2 rounded font-sm" onClick="addToCart()">Adicionar ao carrinho</button>
+            <button className="btn-yellow px-4 py-2 rounded font-sm" onClick={() => addToCart(product)}
+            >
+              Adicionar ao carrinho
+            </button>
             <Link to="/"><button className="px-4 py-2 border rounded">Voltar</button></Link>
           </div>
         </div>
