@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const API = import.meta.env.VITE_API_URL || 'https://fakestoreapi.com'
 
@@ -44,7 +45,7 @@ export default function ProdutoDetalhe(){
           <p className="mb-4">{product.description}</p>
           <div className="flex items-center space-x-3">
             <button className="btn-yellow px-4 py-2 rounded font-sm">Adicionar ao carrinho</button>
-            <a href="/"<button className="px-4 py-2 border rounded">Voltar</button></a>
+            <Link to="/"<button className="px-4 py-2 border rounded">Voltar</button></Link>
           </div>
         </div>
       </div>
