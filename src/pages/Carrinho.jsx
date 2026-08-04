@@ -47,6 +47,7 @@ export default function Carrinho() {
       <div className="flex gap-3">
         <button className="px-4 py-2 border rounded" onClick={() => navigate('/')}>Continuar comprando</button>
         <button className="px-4 py-2 bg-black text-white rounded" onClick={clearCart}>Limpar carrinho</button>
+        <button className="px-4 py-2 bg-green" onClick={() => navigate('/gateway')}>Ir para o pagamento</button>
       </div>
     </div>
   )
