@@ -4,7 +4,7 @@ import { CartContext } from '../context/CartContext'
 
 export default function Carrinho() {
   const navigate = useNavigate()
-  const { cart, removeFromCart, clearCart, cartTotal } = useContext(CartContext)
+  const { cart, alterFromCart, clearCart, cartTotal } = useContext(CartContext)
 
   if (cart.length === 0) {
     return (
@@ -33,7 +33,7 @@ export default function Carrinho() {
               </div>
               <button
                 className="px-3 py-1 border rounded text-sm"
-                onClick={() => removeFromCart(item.id)}
+                onClick={() => alterFromCart(item.id)}
               >
                 Remover -${product.id}+
               </button>
