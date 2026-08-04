@@ -58,7 +58,7 @@ export default function Carrinho() {
               <btnMenos className="px-4 py-2 border rounded text-sm">
                 -   
               </btnMenos>
-              <btnMais className="px-4 py-2 border rounded text-sm" 
+              <btnMais className="px-4 py-2 border rounded text-sm">
                 +
               </btnMais>
             </div>
