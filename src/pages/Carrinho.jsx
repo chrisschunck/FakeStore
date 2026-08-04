@@ -4,7 +4,7 @@ import { CartContext } from '../context/CartContext'
 
 export default function Carrinho() {
   const navigate = useNavigate()
-  const { cart, alterFromCart, clearCart, cartTotal } = useContext(CartContext)
+  const { cart, clearCart, cartTotal } = useContext(CartContext)
 
   if (cart.length === 0) {
     return (
