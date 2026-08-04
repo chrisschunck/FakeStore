@@ -8,7 +8,7 @@ export default function MainLayout(){
       </div>
       <header className="header-bar">
         <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-          <h1 className="text-yellow-400 font-bold">FakeStore Explorer</h1>
+          <Link to="/" <h1 className="text-yellow-400 font-bold">>FakeStore Explorer</h1></Link>
           <nav className="text-sm space-x-4">
             <Link to="/" className="hover:underline">Home</Link>
             <Link to="/perfil" className="hover:underline">Perfil</Link>
