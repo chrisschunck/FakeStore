@@ -6,6 +6,7 @@ export default function Carrinho() {
   const [loading, setLoading] = useState([])
   const [product, setProduct] = useState([])
   const [cart, setCart] = useState([])
+  const [gateway, setGateway] = useState([])
   const [navigate, setNavigate] = useState([])
   const navigate = useNavigate()
 
@@ -23,7 +24,7 @@ export default function Carrinho() {
     <div>
       <h2 className="text-2xl font-bold mb-2">Pedidos</h2>
       <div className="space-y-4 mb-6">
-        {cart.map(item => (
+        {gateway.map(item => (
           <div key={item.id} className="border rounded p-4">
             <div className="flex justify-between items-start gap-4">
               <div className="flex items-center justify-center p-6">
