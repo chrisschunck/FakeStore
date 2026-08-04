@@ -31,7 +31,7 @@ export default function Carrinho() {
               <div className="flex-1">
                 <p className="font-semibold">{item.title}</p>
                 <p className="text-sm text-gray-600">Qtd: {item.quantity}</p>
-                <p className="text-sm">R$ {Number(item.quantity, item.price).toFixed(2)}</p>
+                <p className="text-sm">R$ {Number(item.quantity * item.price).toFixed(2)}</p>
               </div>
               <div className="flex items-center gap-2">
                 <button 
