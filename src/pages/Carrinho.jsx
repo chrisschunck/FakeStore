@@ -55,14 +55,12 @@ export default function Carrinho() {
                 <p className="text-sm text-gray-600">Qtd: {item.quantity}</p>
                 <p className="text-sm">R$ {Number(item.price).toFixed(2)}</p>
               </div>
-              <btnMenos className="px-4 py-2 border rounded text-sm"
-                onClick={() => alterFromCart(item.id)}>
+              <btnMenos className="px-4 py-2 border rounded text-sm">
                 -   
-              </button>
+              </btnMenos>
               <btnMais className="px-4 py-2 border rounded text-sm" 
-                onClick={() => alterFromCart(item.id)}>
                 +
-              </button>
+              </btnMais>
             </div>
           </div>
         ))}
