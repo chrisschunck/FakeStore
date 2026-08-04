@@ -35,7 +35,7 @@ export default function Carrinho() {
                 className="px-3 py-1 border rounded text-sm"
                 onClick={() => removeFromCart(item.id)}
               >
-                Remover
+                Remover -${product.id}+
               </button>
             </div>
           </div>
