@@ -16,9 +16,9 @@ function App() {
         <Routes>
           <Route path="/" element={<MainLayout />}>
             <Route index element={<Home />} />
-            <Route path="conta" element={<Conta />} />
             <Route path="carrinho" element={<Carrinho />} />
             <Route path="produto/:id" element={<ProdutoDetalhe />} />
+            <Route path="conta" element={<Conta />} />
           </Route>
         </Routes>
       </BrowserRouter>
