@@ -32,7 +32,7 @@ export function CartProvider({ children }) {
         })
     }
 
-    const AlterFromCart = () => {
+    const alterFromCart = () => {
         setCart((prev) => prev.filter((item) => item.id !== productId))
     }
 
