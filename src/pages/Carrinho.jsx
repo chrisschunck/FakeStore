@@ -36,14 +36,14 @@ export default function Carrinho() {
               <div className="flex items-center gap-2">
                 <button 
                   className="px-3 py-1 border rounded text-sm bg-gray-100 hover:bg-gray-200"
-                  onClick={() => alterFromCart(item, item.quantity - 1)}
+                  onClick={() => alterFromCart(item.id, item.quantity - 1)}
                 >
                   -
                 </button>
                 <span className="text-sm font-medium px-2">{item.quantity}</span>
                 <button 
                   className="px-3 py-1 border rounded text-sm bg-gray-100 hover:bg-gray-200"
-                  onClick={() => alterFromCart(item, item.quantity + 1)}
+                  onClick={() => alterFromCart(item.id, item.quantity + 1)}
                 >
                   +
                 </button>
