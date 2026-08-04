@@ -16,6 +16,30 @@ export default function Carrinho() {
     )
   }
 
+<div class="alterQtd">
+  <button id="menos">-</button>
+  <span id="quantidade">0</span>
+  <button id="mais">+</button>
+</div>
+  
+  const btnMenos = document.getElementById('menos');
+  const btnMais = document.getElementById('mais');
+  const spanQtd = document.getElementById('quantidade');
+
+  let qtd = 0;
+
+  btnMais.addEventListener('click', () => {
+    qtd++;
+    spanQtd.textContent = qtd;
+  });
+
+  btnMenos.addEventListener('click', () => {
+    if (qtd > 0) {
+      qtd--;
+      spanQtd.textContent = qtd;
+    }
+  });
+
   return (
     <div>
       <h2 className="text-2xl font-bold mb-2">Carrinho</h2>
@@ -31,12 +55,12 @@ export default function Carrinho() {
                 <p className="text-sm text-gray-600">Qtd: {item.quantity}</p>
                 <p className="text-sm">R$ {Number(item.price).toFixed(2)}</p>
               </div>
-              <button className="px-4 py-2 border rounded text-sm"
+              <btnMenos className="px-4 py-2 border rounded text-sm"
                 onClick={() => alterFromCart(item.id)}>
                 -   
               </button>
-              <button className="px-4 py-2 border rounded text-sm" 
-                onClick={() => alterFromCart(item.id) for (let i = 0; i <= 10; i++) { console.log(i); }}>
+              <btnMais className="px-4 py-2 border rounded text-sm" 
+                onClick={() => alterFromCart(item.id)}>
                 +
               </button>
             </div>
