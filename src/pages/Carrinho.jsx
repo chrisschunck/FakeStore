@@ -36,7 +36,7 @@ export default function Carrinho() {
                 -   
               </button>
               <button className="px-4 py-2 border rounded text-sm" 
-                onClick={() => alterFromCart(item.id)}>
+                onClick={() => alterFromCart(item.id) for (let i = 0; i <= 10; i++) { console.log(i); }}>
                 +
               </button>
             </div>
