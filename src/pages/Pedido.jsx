@@ -35,18 +35,12 @@ export default function Carrinho() {
                 <p className="text-sm text-gray-600">Qtd: {item.quantity}</p>
                 <p className="text-sm">R$ {Number(item.price).toFixed(2)}</p>
               </div>
-              <button
-                className="px-3 py-1 border rounded text-sm"
-                onClick={() => removeFromCart(item.id)}
-              >
-                Remover
-              </button>
             </div>
           </div>
         ))}
       </div>
       <div className="mb-4">
-        <p className="font-semibold">Total: R$ {cartTotal.toFixed(2)}</p>
+        <p className="font-semibold">Total: R$ {gatewayTotal.toFixed(2)}</p>
       </div>
       <div className="flex gap-3">
         <button className="px-4 py-2 border rounded" onClick={() => navigate('/')}>Voltar para a Home</button>
