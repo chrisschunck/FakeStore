@@ -32,10 +32,10 @@ export default function Carrinho() {
                 <p className="text-sm">R$ {Number(item.price).toFixed(2)}</p>
               </div>
               <button
-                className="px-3 py-1 border rounded text-sm"
+                className="px-4 py-2 border rounded text-sm"
                 onClick={() => alterFromCart(item.id)}
               >
-                - +
+                -   +
               </button>
             </div>
           </div>
