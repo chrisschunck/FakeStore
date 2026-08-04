@@ -10,7 +10,7 @@ export default function Carrinho() {
   const [navigate, setNavigate] = useState([])
   const navigate = useNavigate()
 
-  if (cart.length === 0) {
+  if (gateway.length === 0) {
     return (
       <div>
         <h2 className="text-2xl font-bold mb-2">Pedidos</h2>
