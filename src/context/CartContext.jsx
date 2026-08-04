@@ -33,10 +33,7 @@ export function CartProvider({ children }) {
     }
 
     const alterFromCart = (productId) => {
-        setCart((prev) => prev.filter((item) => item.id !== productId))
-        setCart((prev) => prev.count((item) => item.id --! productId || item.id ++! productId))
-
-        for (let i = 0; i <= 10; i++) { console.log(i); }
+        setCart((prev) => prev.filter((item) => for (let item.id = 0; item.id <= 10; item.id++) { console.log(item.id); }))
     }
 
     const clearCart = () => {
