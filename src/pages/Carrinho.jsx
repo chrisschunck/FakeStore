@@ -4,41 +4,19 @@ import { CartContext } from '../context/CartContext'
 
 export default function Carrinho() {
   const navigate = useNavigate()
-  const { cart, clearCart, cartTotal } = useContext(CartContext)
+  const { cart, alterFromCart, clearCart, cartTotal } = useContext(CartContext)
 
   if (cart.length === 0) {
     return (
       <div>
         <h2 className="text-2xl font-bold mb-2">Carrinho</h2>
         <p className="mb-4">Seu carrinho está vazio.</p>
-        <button className="px-4 py-2 border rounded" onClick={() => navigate('/')}>Voltar para Home</button>
+        <button className="px-4 py-2 border rounded" onClick={() => navigate('/')}>
+          Voltar para Home
+        </button>
       </div>
     )
   }
-
-<div class="alterQtd">
-  <button id="menos">-</button>
-  <span id="quantidade">0</span>
-  <button id="mais">+</button>
-</div>
-  
-  const btnMenos = document.getElementById('menos');
-  const btnMais = document.getElementById('mais');
-  const spanQtd = document.getElementById('quantidade');
-
-  let qtd = 0;
-
-  btnMais.addEventListener('click', () => {
-    qtd++;
-    spanQtd.textContent = qtd;
-  });
-
-  btnMenos.addEventListener('click', () => {
-    if (qtd > 0) {
-      qtd--;
-      spanQtd.textContent = qtd;
-    }
-  });
 
   return (
     <div>
@@ -46,21 +24,30 @@ export default function Carrinho() {
       <div className="space-y-4 mb-6">
         {cart.map(item => (
           <div key={item.id} className="border rounded p-4">
-            <div className="flex justify-between items-start gap-4">
-              <div className="flex items-center justify-center p-6">
-                <img src={item.image} alt={item.image} className="max-h-36 object-contain" />
+            <div className="flex justify-between items-center gap-4">
+              <div className="flex items-center justify-center p-2">
+                <img src={item.image} alt={item.title} className="max-h-24 object-contain" />
               </div>
-              <div>
+              <div className="flex-1">
                 <p className="font-semibold">{item.title}</p>
                 <p className="text-sm text-gray-600">Qtd: {item.quantity}</p>
                 <p className="text-sm">R$ {Number(item.price).toFixed(2)}</p>
               </div>
-              <btnMenos className="px-4 py-2 border rounded text-sm">
-                -   
-              </btnMenos>
-              <btnMais className="px-4 py-2 border rounded text-sm">
-                +
-              </btnMais>
+              <div className="flex items-center gap-2">
+                <button 
+                  className="px-3 py-1 border rounded text-sm bg-gray-100 hover:bg-gray-200"
+                  onClick={() => alterFromCart(item, item.quantity - 1)}
+                >
+                  -
+                </button>
+                <span className="text-sm font-medium px-2">{item.quantity}</span>
+                <button 
+                  className="px-3 py-1 border rounded text-sm bg-gray-100 hover:bg-gray-200"
+                  onClick={() => alterFromCart(item, item.quantity + 1)}
+                >
+                  +
+                </button>
+              </div>
             </div>
           </div>
         ))}
@@ -69,9 +56,15 @@ export default function Carrinho() {
         <p className="font-semibold">Total: R$ {cartTotal.toFixed(2)}</p>
       </div>
       <div className="flex gap-3">
-        <button className="px-4 py-2 border rounded" onClick={() => navigate('/')}>Continuar comprando</button>
-        <button className="px-4 py-2 bg-black text-white rounded" onClick={clearCart}>Limpar carrinho</button>
-        <button className="px-4 py-2 bg-green-600 text-white rounded" onClick={() => navigate('/gateway')}>Ir para o pagamento</button>
+        <button className="px-4 py-2 border rounded" onClick={() => navigate('/')}>
+          Continuar comprando
+        </button>
+        <button className="px-4 py-2 bg-black text-white rounded" onClick={clearCart}>
+          Limpar carrinho
+        </button>
+        <button className="px-4 py-2 bg-green-600 text-white rounded" onClick={() => navigate('/gateway')}>
+          Ir para o pagamento
+        </button>
       </div>
     </div>
   )
