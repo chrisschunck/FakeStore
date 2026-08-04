@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './index.css'
 import MainLayout from './layout/MainLayout'
 import Home from './pages/Home'
-import Perfil from './pages/Perfil'
+import Conta from './pages/Conta'
 import Carrinho from './pages/Carrinho'
 import ProdutoDetalhe from './pages/ProdutoDetalhe'
 import { CartProvider } from './context/CartContext'
@@ -16,7 +16,7 @@ function App() {
         <Routes>
           <Route path="/" element={<MainLayout />}>
             <Route index element={<Home />} />
-            <Route path="perfil" element={<Perfil />} />
+            <Route path="conta" element={<Conta />} />
             <Route path="carrinho" element={<Carrinho />} />
             <Route path="produto/:id" element={<ProdutoDetalhe />} />
           </Route>
