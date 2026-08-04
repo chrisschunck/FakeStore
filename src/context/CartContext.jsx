@@ -32,9 +32,19 @@ export function CartProvider({ children }) {
         })
     }
 
-    const alterFromCart = () => {
-        setCart((prev) => prev.filter((item) => item.id !== productId))
-    }
+    const alterFromCart = (productId, newQuantity) => {
+        if (newQuantity <= 0) {
+            setCart((prev) => prev.prev.filter((item) => item.id !== productId)) // ou a sua lógica de remoção
+    return
+  }
+
+  // Caso contrário, mapeamos o carrinho atualizando apenas a quantidade do item correspondente
+  setCart((prev) =>
+    prev.map((item) =>
+      item.id === productId ? { ...item, quantity: newQuantity } : item
+    )
+  )
+}
 
     const clearCart = () => {
         setCart([])
