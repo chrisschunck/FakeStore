@@ -10,9 +10,13 @@ export default function Perfil(){
     <div className="card">
       <div className="gap-4 py-20">
         <label for>e-mail ou telefone</label>
-        <input type="text" placeholder="digite seu email">email</input>
+        <input type="text" placeholder="digite seu email">E-mail</input>
         <label for="">senha</label>
-        <input type="text" className="" placeholder="digite sua senha">senha</input>
+        <input type="text" className="" placeholder="digite sua senha">Senha</input>
+        <button className="bg-yellow text-black" onClick="login()">Entrar</button>
+        <button className="bg-black text-yellow" onClick="register()">Criar Conta</button>
+        <hr className="">Ou</hr>
+        <button className="bg-white" onClick="google()">G     Fazer login com o Google</button>
       </div>
     </div>
   )
