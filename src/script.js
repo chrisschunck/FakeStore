@@ -19,4 +19,5 @@ function register(nome, e-mail, senha) {
   const register = document.getElementById("nome", "e-mail", "senha");
   document.getLocalStorage("nome", "e-mail", "senha");
   const saved = document.setLocalStorage(register);
+  console.log(saved);
 }
