@@ -16,7 +16,6 @@ export default function Perfil(){
         <button className="bg-yellow text-black" onClick="login()">Entrar</button>
         <button className="bg-black text-yellow" onClick="register()">Criar Conta</button>
         <hr className="">Ou</hr>
-        <button className="bg-white" onClick="google()">G     Fazer login com o Google</button>
       </div>
     </div>
   )
