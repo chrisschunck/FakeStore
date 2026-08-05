@@ -19,7 +19,7 @@ function App() {
             <Route index element={<Home />} />
             <Route path="carrinho" element={<Carrinho />} />
             <Route path="produto/:id" element={<ProdutoDetalhe />} />
-            <Route path="pedidos" elemennt={<Pedidos />}
+            <Route path="pedidos" elemennt={<Pedidos />} />
             <Route path="perfil" element={<Perfil />} />
           </Route>
         </Routes>
