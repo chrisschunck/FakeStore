@@ -11,7 +11,7 @@ function login(e-mail, senha) {
 }
 
 function logout(login) {
-  const logout = document.getElementById("login").exit;
+  const logout = document.getElementById("login").remove;
   document.setLocalStorage(logout);
 }
 
