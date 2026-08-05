@@ -1,4 +1,4 @@
-export default function Conta(){
+export default function Perfil(){
   return (
     <div className="header-top"
       <div className="text-black-700 container mx-auto py-1 px-4 bg-white text-sm">FakeStore Explorer</div>
