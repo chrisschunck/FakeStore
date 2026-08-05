@@ -13,7 +13,7 @@ export default function MainLayout(){
             <Link to="/" className="hover:underline">Home</Link>
             <Link to="/carrinho" className="hover:underline">Carrinho</Link>
             <Link to="/pedidos" className="hover:underline">Pedidos</Link>
-            <Link to="/conta" className="hover:underline">Conta</Link>
+            <Link to="/perfil" className="hover:underline">Perfil</Link>
           </nav>
         </div>
       </header>
