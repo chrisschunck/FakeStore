@@ -1,4 +1,4 @@
-export default function Perfil(){
+export default function Conta(){
   return (
     <div>
       <h2 className="text-2xl font-bold mb-2">Perfil</h2>
